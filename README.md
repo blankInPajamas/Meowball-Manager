@@ -1,1 +1,3 @@
 # Meowball-Manager
+
+Meowball Manager is a lighthearted football management game where you run a fully “cat-ified” super‑club, guiding squads of meowified star players through seasons of tactical battles, transfers, and training, all wrapped in a cozy, humorous presentation aimed at both football fans and casual players. It keeps the long‑term planning and data‑driven depth of classic football manager sims but reimagines everything—from player names to events and UI—through a playful feline lens, so building your dynasty feels more like caring for a chaotic cat colony than running a traditional club.
