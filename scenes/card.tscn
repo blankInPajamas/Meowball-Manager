@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqj8xwe776nvb"]
+
+[ext_resource type="Texture2D" uid="uid://dawpqptph5pdd" path="res://assets/card002.jpg" id="1_d81rb"]
+
+[node name="Card" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(63, 108)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_d81rb")
+region_rect = Rect2(0, 0, 665, 960)
