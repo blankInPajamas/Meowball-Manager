@@ -1,0 +1,198 @@
+[gd_scene load_steps=8 format=3 uid="uid://bx603mamtyv2x"]
+
+[ext_resource type="Texture2D" uid="uid://bqbblfkpcj33v" path="res://assets/player001.jpg" id="1_g2els"]
+[ext_resource type="Script" uid="uid://b2mlcy5dnt5ff" path="res://scripts/player.gd" id="1_qhqgy"]
+[ext_resource type="FontFile" uid="uid://ujwfbt2bxjof" path="res://fonts/BubblegumSans-Regular.ttf" id="2_qhqgy"]
+
+[sub_resource type="Theme" id="Theme_dqkch"]
+
+[sub_resource type="Theme" id="Theme_g2els"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qhqgy"]
+content_margin_left = 10.0
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dqkch"]
+
+[node name="Player" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qhqgy")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -540.0
+offset_top = -300.0
+offset_right = 540.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Img Container" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 53.0
+offset_top = -250.0
+offset_right = 353.0
+offset_bottom = 250.0
+grow_vertical = 2
+
+[node name="Img" type="TextureRect" parent="Panel/Img Container"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -199.0
+offset_right = 125.0
+offset_bottom = 101.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_dqkch")
+texture = ExtResource("1_g2els")
+expand_mode = 1
+
+[node name="Rating" type="RichTextLabel" parent="Panel/Img Container"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -132.0
+offset_right = 125.0
+offset_bottom = -92.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("2_qhqgy")
+theme_override_font_sizes/normal_font_size = 30
+text = "Rating"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Detail Container" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -147.0
+offset_top = -250.0
+offset_right = 453.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Detail Container"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -225.0
+offset_right = 250.0
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="Player name" type="RichTextLabel" parent="Panel/Detail Container/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme = SubResource("Theme_g2els")
+theme_override_fonts/normal_font = ExtResource("2_qhqgy")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_qhqgy")
+text = "Player"
+vertical_alignment = 1
+
+[node name="Position" type="RichTextLabel" parent="Panel/Detail Container/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme = SubResource("Theme_g2els")
+theme_override_fonts/normal_font = ExtResource("2_qhqgy")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_qhqgy")
+text = "Position"
+vertical_alignment = 1
+
+[node name="Nation" type="RichTextLabel" parent="Panel/Detail Container/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme = SubResource("Theme_g2els")
+theme_override_fonts/normal_font = ExtResource("2_qhqgy")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_qhqgy")
+text = "Nation"
+vertical_alignment = 1
+
+[node name="Age" type="RichTextLabel" parent="Panel/Detail Container/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme = SubResource("Theme_g2els")
+theme_override_fonts/normal_font = ExtResource("2_qhqgy")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_qhqgy")
+text = "Age"
+vertical_alignment = 1
+
+[node name="Squad" type="RichTextLabel" parent="Panel/Detail Container/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme = SubResource("Theme_g2els")
+theme_override_fonts/normal_font = ExtResource("2_qhqgy")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_qhqgy")
+text = "Squad"
+vertical_alignment = 1
+
+[node name="Goals" type="RichTextLabel" parent="Panel/Detail Container/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme = SubResource("Theme_g2els")
+theme_override_fonts/normal_font = ExtResource("2_qhqgy")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_qhqgy")
+text = "Goals"
+vertical_alignment = 1
+
+[node name="Assists" type="RichTextLabel" parent="Panel/Detail Container/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme = SubResource("Theme_g2els")
+theme_override_fonts/normal_font = ExtResource("2_qhqgy")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_qhqgy")
+text = "Assists"
+vertical_alignment = 1
+
+[node name="Back Btn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1115.0
+offset_top = 77.0
+offset_right = 1155.0
+offset_bottom = 107.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_dqkch")
+text = "Back"

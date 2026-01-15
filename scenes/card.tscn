@@ -1,11 +1,43 @@
-[gd_scene load_steps=2 format=3 uid="uid://dqj8xwe776nvb"]
+[gd_scene load_steps=6 format=3 uid="uid://dqj8xwe776nvb"]
 
-[ext_resource type="Texture2D" uid="uid://dawpqptph5pdd" path="res://assets/card002.jpg" id="1_d81rb"]
+[ext_resource type="Script" uid="uid://cwtdahfntaih0" path="res://scripts/card.gd" id="1_6u4wf"]
+[ext_resource type="Texture2D" uid="uid://dwxcswynq6ug0" path="res://assets/card001.png" id="2_ktuci"]
+[ext_resource type="PackedScene" uid="uid://bx603mamtyv2x" path="res://scenes/player.tscn" id="3_ktuci"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kg30u"]
+size = Vector2(112, 194)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6u4wf"]
 
 [node name="Card" type="Node2D"]
+script = ExtResource("1_6u4wf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(63, 108)
+position = Vector2(57, 99)
 scale = Vector2(0.3, 0.3)
-texture = ExtResource("1_d81rb")
-region_rect = Rect2(0, 0, 665, 960)
+texture = ExtResource("2_ktuci")
+
+[node name="Area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area"]
+position = Vector2(57, 98)
+shape = SubResource("RectangleShape2D_kg30u")
+
+[node name="Back Btn" type="Button" parent="Area"]
+visible = false
+offset_left = 1043.0
+offset_top = 81.0
+offset_right = 1113.0
+offset_bottom = 121.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_6u4wf")
+text = "Back"
+
+[node name="Card Details" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Player" parent="Card Details" instance=ExtResource("3_ktuci")]
+
+[connection signal="input_event" from="Area" to="." method="_on_area_input_event"]
+[connection signal="pressed" from="Area/Back Btn" to="." method="_on_back_btn_pressed"]
