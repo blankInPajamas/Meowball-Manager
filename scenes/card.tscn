@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dqj8xwe776nvb"]
+[gd_scene load_steps=5 format=3 uid="uid://dqj8xwe776nvb"]
 
 [ext_resource type="Script" uid="uid://cwtdahfntaih0" path="res://scripts/card.gd" id="1_6u4wf"]
 [ext_resource type="Texture2D" uid="uid://dwxcswynq6ug0" path="res://assets/card001.png" id="2_ktuci"]
-[ext_resource type="PackedScene" uid="uid://bx603mamtyv2x" path="res://scenes/player.tscn" id="3_ktuci"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kg30u"]
 size = Vector2(112, 194)
@@ -36,8 +35,6 @@ text = "Back"
 
 [node name="Card Details" type="CanvasLayer" parent="."]
 visible = false
-
-[node name="Player" parent="Card Details" instance=ExtResource("3_ktuci")]
 
 [connection signal="input_event" from="Area" to="." method="_on_area_input_event"]
 [connection signal="pressed" from="Area/Back Btn" to="." method="_on_back_btn_pressed"]
