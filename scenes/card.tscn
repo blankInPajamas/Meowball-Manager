@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dwxcswynq6ug0" path="res://assets/card001.png" id="2_ktuci"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kg30u"]
-size = Vector2(112, 194)
+size = Vector2(74, 129)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6u4wf"]
 
@@ -12,14 +12,14 @@ size = Vector2(112, 194)
 script = ExtResource("1_6u4wf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(57, 99)
-scale = Vector2(0.3, 0.3)
+position = Vector2(37.774998, 65.971146)
+scale = Vector2(0.19960836, 0.19960836)
 texture = ExtResource("2_ktuci")
 
 [node name="Area" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area"]
-position = Vector2(57, 98)
+position = Vector2(38, 65.5)
 shape = SubResource("RectangleShape2D_kg30u")
 
 [node name="Back Btn" type="Button" parent="Area"]

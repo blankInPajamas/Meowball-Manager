@@ -28,8 +28,9 @@ func _setup_player_information(p_name: String, p_squad: String) -> void:
 
 func _populate_ui(p: Dictionary) -> void:
 	player_position.text = ("Position: " + p['Pos'])
-	nation.text = ("Nation: " + p['Nation'])
+	var nation_data = p['Nation'].split(" ")
+	nation.text = ("Nation: " + nation_data[1])
 	age.text = ("Age: " + str(p['Age']))
-	goals.text = ("Goal count: " + str(p['Gls']))
-	assists.text = ("Assist count: " + str(p['Ast']))
+	goals.text = ("Goal count: " + str(int(p['Gls'])))
+	assists.text = ("Assist count: " + str(int(p['Ast'])))
 	

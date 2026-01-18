@@ -5,12 +5,40 @@
 [node name="Zone" type="Node2D"]
 
 [node name="Card" parent="." instance=ExtResource("1_g7a44")]
-position = Vector2(283, 258)
+position = Vector2(544, 51)
 player_name = "Gavi"
 squad = "Barcelona"
 
 [node name="Card2" parent="." instance=ExtResource("1_g7a44")]
-position = Vector2(566, 259)
+position = Vector2(743, 38)
+player_name = "Francesco Acerbi"
+squad = "Inter"
 
 [node name="Card3" parent="." instance=ExtResource("1_g7a44")]
-position = Vector2(856, 260)
+position = Vector2(961, 47)
+player_name = "Tammy Abraham"
+squad = "Milan"
+
+[node name="Card4" parent="." instance=ExtResource("1_g7a44")]
+position = Vector2(763, 555)
+
+[node name="Card5" parent="." instance=ExtResource("1_g7a44")]
+position = Vector2(513, 413)
+
+[node name="Card6" parent="." instance=ExtResource("1_g7a44")]
+position = Vector2(664, 389)
+
+[node name="Card7" parent="." instance=ExtResource("1_g7a44")]
+position = Vector2(850, 391)
+
+[node name="Card8" parent="." instance=ExtResource("1_g7a44")]
+position = Vector2(992, 423)
+
+[node name="Card9" parent="." instance=ExtResource("1_g7a44")]
+position = Vector2(610, 214)
+
+[node name="Card10" parent="." instance=ExtResource("1_g7a44")]
+position = Vector2(893, 214)
+
+[node name="Card11" parent="." instance=ExtResource("1_g7a44")]
+position = Vector2(755, 235)
