@@ -1,0 +1,73 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4cloil0o6agj"]
+
+[ext_resource type="Script" uid="uid://bkowfouaqvdlj" path="res://scripts/selection.gd" id="1_jqogx"]
+
+[node name="selection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jqogx")
+
+[node name="introduction" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -300.0
+offset_right = 500.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="introduction"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -234.0
+offset_top = -29.0
+offset_right = 234.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="name_container" type="HBoxContainer" parent="introduction/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="name_label" type="Label" parent="introduction/VBoxContainer/name_container"]
+layout_mode = 2
+text = "Enter your name: "
+
+[node name="name_input" type="LineEdit" parent="introduction/VBoxContainer/name_container"]
+custom_minimum_size = Vector2(300, 40)
+layout_mode = 2
+placeholder_text = "Enter your name"
+
+[node name="team_container" type="HBoxContainer" parent="introduction/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="team_label" type="Label" parent="introduction/VBoxContainer/team_container"]
+layout_mode = 2
+text = "Select your team:"
+
+[node name="team_select" type="OptionButton" parent="introduction/VBoxContainer/team_container"]
+custom_minimum_size = Vector2(300, 40)
+layout_mode = 2
+
+[node name="confirm_btn" type="Button" parent="introduction/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Confirm"
+
+[connection signal="pressed" from="introduction/VBoxContainer/confirm_btn" to="." method="_on_confirm_btn_pressed"]

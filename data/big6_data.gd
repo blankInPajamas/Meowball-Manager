@@ -1,4 +1,6 @@
-[
+extends Node
+
+var PLAYER_INFORMATION = [
 	{
 		"Player":"Vasilije Ad\u017ei\u0107",
 		"Nation":"me MNE",
