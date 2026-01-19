@@ -27,4 +27,5 @@ func _add_to_options() -> void:
 
 func _on_confirm_btn_pressed() -> void:
 	Global.USER_INFORMATION['NAME'] = name_input.text
-	
+	Global.USER_INFORMATION['SELECTED_TEAM'] = team_list[team_select.selected]
+	print(Global.USER_INFORMATION)
